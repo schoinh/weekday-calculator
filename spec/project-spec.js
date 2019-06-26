@@ -50,8 +50,5 @@ describe('Weekday Calculator', function() {
     let inputDate2 = new Date (2021, "March", 3);
     inputDate2.getOutput();
     expect(inputDate2.dayOfWeek).toEqual("Wednesday");
-    let inputDate3 = new Date (1991, "January", 19);
-    inputDate3.getOutput();
-    expect(inputDate3.dayOfWeek).toEqual("Saturday");
   });
 })
