@@ -16,6 +16,7 @@ describe('Weekday Calculator', function() {
     expect(inputDate.month).toEqual(5);
     expect(inputDate.dayOfMonth).toEqual(3);
   });
+
   it('should convert year to work in formula', function() {
     let inputDate1 = new Date (2019, "January", 3);
     inputDate1.convertDate();
@@ -27,10 +28,18 @@ describe('Weekday Calculator', function() {
     inputDate3.convertDate();
     expect(inputDate3.year).toEqual(2019);
   });
+
   it('should get first 2 and last 2 digits of Y', function() {
     let inputDate = new Date (2019, "January", 3);
     inputDate.convertDate();
     expect(inputDate.y).toEqual(18);
     expect(inputDate.c).toEqual(20);
-  })
+  });
+
+  it('should calculate the day of the week', function() {
+    let inputDate = new Date (2019, "January", 3);
+    inputDate.convertDate();
+    inputDate.getDayOfWeek();
+    expect(inputDate.dayOfWeek).toEqual(4);
+  });  
 })

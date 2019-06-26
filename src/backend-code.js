@@ -5,6 +5,7 @@ export class Date {
     this.dayOfMonth = dayOfMonth;
     this.y;
     this.c;
+    this.dayOfWeek;
   }
 
   convertDate() {
@@ -20,4 +21,16 @@ export class Date {
     this.month = months.indexOf(this.month) + 1;
   }
 
+  getDayOfWeek() {
+    const d = this.dayOfMonth;
+    const m = this.month;
+    const y = this.y;
+    const c = this.c;
+
+    this.dayOfWeek = Math.floor((d + (2.6*m - 0.2) + y + y/4 + c/4 - 2*c) % 7);
+
+    if (this.dayOfWeek < 0) {
+      this.dayOfWeek += 7;
+    }
+  }
 }
