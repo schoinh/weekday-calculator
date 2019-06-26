@@ -33,4 +33,15 @@ export class Date {
       this.dayOfWeek += 7;
     }
   }
+
+  getDayName() {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    this.dayOfWeek = days[this.dayOfWeek];
+  }
+
+  getOutput () {
+    this.convertDate();
+    this.getDayOfWeek();
+    this.getDayName();
+  }
 }

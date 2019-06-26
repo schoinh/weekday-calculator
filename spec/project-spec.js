@@ -41,5 +41,17 @@ describe('Weekday Calculator', function() {
     inputDate.convertDate();
     inputDate.getDayOfWeek();
     expect(inputDate.dayOfWeek).toEqual(4);
-  });  
+  });
+
+  it('should convert day of week to name of day', function() {
+    let inputDate1 = new Date (2019, "January", 3);
+    inputDate1.getOutput();
+    expect(inputDate1.dayOfWeek).toEqual("Thursday");
+    let inputDate2 = new Date (2021, "March", 3);
+    inputDate2.getOutput();
+    expect(inputDate2.dayOfWeek).toEqual("Wednesday");
+    let inputDate3 = new Date (1991, "January", 19);
+    inputDate3.getOutput();
+    expect(inputDate3.dayOfWeek).toEqual("Saturday");
+  });
 })
