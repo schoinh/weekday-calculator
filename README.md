@@ -13,7 +13,6 @@ Enter a date and find out which day of the week it corresponds to.
 | :-------------     | :------------- | :------------- |
 | **Save a date as a Date object** | July 3, 2019 | inputDate = { year: 2019, month: July, dayOfMonth: 3} |
 | **Convert month to number (shifted month)** | January 3, 2019 | m = 11 |
-| **Convert month to a number** | July 3, 2019 | inputDate = { year: 2019, month: 7, dayOfMonth: 3} |
 | **Convert year to work in formula** | January 3, 2019 | Y = 2018 |
 | **Get first 2 and last 2 digits of Y** | January 3, 2019 | y = 18, c = 20 |
 | **Calculate day of week** | January 3, 2019 | w = 4 |
