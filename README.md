@@ -16,6 +16,7 @@ Enter a date and find out which day of the week it corresponds to.
 | **Convert year to work in formula** | January 3, 2019 | Y = 2018 |
 | **Get first 2 and last 2 digits of Y** | January 3, 2019 | y = 18, c = 20 |
 | **Calculate day of week** | January 3, 2019 | w = 4 |
+| **Covert day of week from number to name of day** | January 3, 2019 | Thursday |
 
 ## Setup/Installation Requirements
 
