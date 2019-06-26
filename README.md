@@ -11,9 +11,7 @@ Enter a date and find out which day of the week it corresponds to.
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Save a date as a Date object** | July 3, 2019 | Year: 2019, Month: July, Day of Month: 3 |
-| **Calculate day of week** | January 3, 2019 | Day of Week: 4 |
-| **Covert day of week from number to name of day** | January 3, 2019 | Thursday |
+| **User inputs a date, submits and receives the day of the week** | January 3, 2019 | Thursday |
 
 ## Setup/Installation Requirements
 
@@ -45,4 +43,4 @@ _Please contact Na Hyung and Jessica with questions and comments._
 
 *GNU GPLv3*
 
-Copyright (c) 2019 **_Na Hyung Choi_**
+Copyright (c) 2019 **_Na Hyung Choi & Jessica Munoz_**
