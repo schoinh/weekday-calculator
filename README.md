@@ -11,11 +11,8 @@ Enter a date and find out which day of the week it corresponds to.
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Save a date as a Date object** | July 3, 2019 | inputDate = { year: 2019, month: July, dayOfMonth: 3} |
-| **Convert month to number (shifted month)** | January 3, 2019 | m = 11 |
-| **Convert year to work in formula** | January 3, 2019 | Y = 2018 |
-| **Get first 2 and last 2 digits of Y** | January 3, 2019 | y = 18, c = 20 |
-| **Calculate day of week** | January 3, 2019 | w = 4 |
+| **Save a date as a Date object** | July 3, 2019 | Year: 2019, Month: July, Day of Month: 3 |
+| **Calculate day of week** | January 3, 2019 | Day of Week: 4 |
 | **Covert day of week from number to name of day** | January 3, 2019 | Thursday |
 
 ## Setup/Installation Requirements
