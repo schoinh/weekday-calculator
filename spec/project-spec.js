@@ -1,6 +1,22 @@
-import { monthToNum, makeDate, getDayOfWeek, convertDay } from './../src/backend-code.js';
+import { checkYear, checkLeapYear, dateRange, monthToNum, makeDate, getDayOfWeek, convertDay } from './../src/backend-code.js';
 
 describe('Weekday Calculator', function() {
+  it('should determine whether year is valid', function() {
+    const invalidYear = 30;
+    expect(checkYear(invalidYear)).toBe(false);
+  });
+
+  it('should determine whether year is a leap year', function() {
+    const leapYear = 2000;
+    expect(checkLeapYear(leapYear)).toBe(true);
+  });
+
+  it('should determine range of valid dates for each month', function() {
+    const year1 = 2000;
+    const month1 = 1;
+    expect(dateRange(year1, month1)).toEqual(29);
+  });
+
   const year = 2019;
   const month = "June";
   const dayOfMonth = 27;
