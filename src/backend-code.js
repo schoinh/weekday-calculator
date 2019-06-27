@@ -3,6 +3,19 @@ export const monthToNum = function (monthString) {
   return months.indexOf(monthString);
 }
 
+export const makeDate = function (year, month, dayOfMonth) {
+  return new Date (year, month, dayOfMonth);
+}
+
+export const getDayOfWeek = function (date) {
+  return date.getDay();
+}
+
+// export const getDayName = function (dayNum) {
+//   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+//   return = days[dayNum];
+// }
+
 // export class Date {
 //   constructor(year, month, dayOfMonth) {
 //     super(year, month, dayOfMonth);
@@ -33,8 +46,7 @@ export const monthToNum = function (monthString) {
 //   }
 //
 //   getDayName() {
-//     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-//     this.dayOfWeek = days[this.dayOfWeek];
+
 //   }
 //
 //   getOutput () {

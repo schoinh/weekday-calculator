@@ -1,20 +1,52 @@
-import { monthToNum } from './../src/backend-code.js';
+import { monthToNum, makeDate, getDayOfWeek } from './../src/backend-code.js';
 
 describe('Weekday Calculator', function() {
+  const year = 2019;
+  const month = "June";
+  const dayOfMonth = 27;
+
+  const monthNum = monthToNum(month);
+  const newDate = makeDate(year, monthNum, dayOfMonth);
 
   it('should convert the month string to a number', function() {
-    const year = 2019;
-    const month = "June";
-    const dayOfMonth = 27;
-    expect(monthToNum(month)).toEqual(5);
+    expect(monthNum).toEqual(5);
   });
 
-  it('should save the input as a Date object', function() {
-    const inputDate = new Date (2019, 5, 27);
-    expect(inputDate.getFullYear()).toEqual(2019);
-    expect(inputDate.getMonth()).toEqual(5);
-    expect(inputDate.getDate()).toEqual(27);
-  })
+  it('should save user input in a Date object', function() {
+    expect(newDate.getMonth()).toEqual(5); 
+  });
+
+  it('should return the day of week as a number', function(){
+    expect(getDayOfWeek(newDate)).toEqual(4);
+  });
+
+
+  // it('should convert day of week to name of day', function() {
+  //   const monthNum = monthToNum(month);
+  //   const newDate = makeDate(year, monthNum, dayOfMonth);
+  //   expect(makeDate.getDay()).toEqual(Thursday)
+  // })
+
+  // it('should convert day of week to name of day', function() {
+  //   let inputDate1 = new Date (2019, "January", 3);
+  //   inputDate1.getOutput();
+  //   expect(inputDate1.dayOfWeek).toEqual("Thursday");
+  //   let inputDate2 = new Date (2021, "March", 3);
+  //   inputDate2.getOutput();
+  //   expect(inputDate2.dayOfWeek).toEqual("Wednesday");
+  // });
+
+  // it('should save the input as a Date object', function() {
+  //   const inputDate = new Date (2019, 5, 27);
+  //   expect(inputDate.getFullYear()).toEqual(2019);
+  //   expect(inputDate.getMonth()).toEqual(5);
+  //   expect(inputDate.getDate()).toEqual(27);
+  // });
+
+  // it('should return the day of week as a number', function() {
+  //   const inputDate = new Date (2019, 5, 27);
+  //   expect(inputDate.getDay()).toEqual(4);
+  // })
 
 
 
@@ -52,12 +84,4 @@ describe('Weekday Calculator', function() {
   //   expect(inputDate.dayOfWeek).toEqual(4);
   // });
   //
-  // it('should convert day of week to name of day', function() {
-  //   let inputDate1 = new Date (2019, "January", 3);
-  //   inputDate1.getOutput();
-  //   expect(inputDate1.dayOfWeek).toEqual("Thursday");
-  //   let inputDate2 = new Date (2021, "March", 3);
-  //   inputDate2.getOutput();
-  //   expect(inputDate2.dayOfWeek).toEqual("Wednesday");
-  // });
 })
