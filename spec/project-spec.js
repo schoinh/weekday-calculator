@@ -1,4 +1,4 @@
-import { monthToNum, makeDate, getDayOfWeek } from './../src/backend-code.js';
+import { monthToNum, makeDate, getDayOfWeek, convertDay } from './../src/backend-code.js';
 
 describe('Weekday Calculator', function() {
   const year = 2019;
@@ -7,81 +7,21 @@ describe('Weekday Calculator', function() {
 
   const monthNum = monthToNum(month);
   const newDate = makeDate(year, monthNum, dayOfMonth);
+  const dayOfWeekNum = getDayOfWeek(newDate);
 
   it('should convert the month string to a number', function() {
     expect(monthNum).toEqual(5);
   });
 
   it('should save user input in a Date object', function() {
-    expect(newDate.getMonth()).toEqual(5); 
+    expect(newDate.getMonth()).toEqual(5);
   });
 
   it('should return the day of week as a number', function(){
-    expect(getDayOfWeek(newDate)).toEqual(4);
+    expect(dayOfWeekNum).toEqual(4);
   });
 
-
-  // it('should convert day of week to name of day', function() {
-  //   const monthNum = monthToNum(month);
-  //   const newDate = makeDate(year, monthNum, dayOfMonth);
-  //   expect(makeDate.getDay()).toEqual(Thursday)
-  // })
-
-  // it('should convert day of week to name of day', function() {
-  //   let inputDate1 = new Date (2019, "January", 3);
-  //   inputDate1.getOutput();
-  //   expect(inputDate1.dayOfWeek).toEqual("Thursday");
-  //   let inputDate2 = new Date (2021, "March", 3);
-  //   inputDate2.getOutput();
-  //   expect(inputDate2.dayOfWeek).toEqual("Wednesday");
-  // });
-
-  // it('should save the input as a Date object', function() {
-  //   const inputDate = new Date (2019, 5, 27);
-  //   expect(inputDate.getFullYear()).toEqual(2019);
-  //   expect(inputDate.getMonth()).toEqual(5);
-  //   expect(inputDate.getDate()).toEqual(27);
-  // });
-
-  // it('should return the day of week as a number', function() {
-  //   const inputDate = new Date (2019, 5, 27);
-  //   expect(inputDate.getDay()).toEqual(4);
-  // })
-
-
-
-  // it('should convert the month to a number', function() {
-  //   const inputDate = new Date (2019, "July", 3);
-  //   inputDate.convertDate();
-  //   expect(inputDate.year).toEqual(2019);
-  //   expect(inputDate.month).toEqual(5);
-  //   expect(inputDate.dayOfMonth).toEqual(3);
-  // });
-  //
-  // it('should convert year to work in formula', function() {
-  //   let inputDate1 = new Date (2019, "January", 3);
-  //   inputDate1.convertDate();
-  //   expect(inputDate1.year).toEqual(2018);
-  //   let inputDate2 = new Date (2019, "February", 3);
-  //   inputDate2.convertDate();
-  //   expect(inputDate2.year).toEqual(2018);
-  //   let inputDate3 = new Date (2019, "March", 3);
-  //   inputDate3.convertDate();
-  //   expect(inputDate3.year).toEqual(2019);
-  // });
-  //
-  // it('should get first 2 and last 2 digits of Y', function() {
-  //   let inputDate = new Date (2019, "January", 3);
-  //   inputDate.convertDate();
-  //   expect(inputDate.y).toEqual(18);
-  //   expect(inputDate.c).toEqual(20);
-  // });
-  //
-  // it('should calculate the day of the week', function() {
-  //   let inputDate = new Date (2019, "January", 3);
-  //   inputDate.convertDate();
-  //   inputDate.getDayOfWeek();
-  //   expect(inputDate.dayOfWeek).toEqual(4);
-  // });
-  //
-})
+  it('should return the day of week as a string', function(){
+    expect(convertDay(dayOfWeekNum)).toEqual("Thursday");
+  });
+});
