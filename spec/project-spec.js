@@ -11,12 +11,6 @@ describe('Weekday Calculator', function() {
     expect(checkLeapYear(leapYear)).toBe(true);
   });
 
-  it('should determine range of valid dates for each month', function() {
-    const year1 = 2000;
-    const month1 = 1;
-    expect(dateRange(year1, month1)).toEqual(29);
-  });
-
   const year = 2019;
   const month = "June";
   const dayOfMonth = 27;
@@ -27,6 +21,12 @@ describe('Weekday Calculator', function() {
 
   it('should convert the month string to a number', function() {
     expect(monthNum).toEqual(5);
+  });
+
+  it('should determine range of valid dates for each month', function() {
+    const year1 = 2000;
+    const month1 = 1;
+    expect(dateRange(year1, month1)).toEqual(29);
   });
 
   it('should save user input in a Date object', function() {
